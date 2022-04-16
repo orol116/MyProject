@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <comment>Member Service SQL</comment>
+
+    <!--중복 확인 검사-->
+    <entry key="duplicateCheck">
+        SELECT COUNT(*)
+        FROM CUSTOMER
+        WHERE MEMBER_ID = ?
+    </entry>
+
+    <!--회원 가입-->
+    <entry key="signUp">
+        INSERT INTO CUSTOMER
+        VALUES(DELIVERY_NO.NEXTVAL, ?, ?, ?, ?, ?, ?)
+    </entry>
+
+    <!--로그인-->
+    <entry key="login">
+        SELECT MEMBER_NO, MEMBER_ID, MEMBER_NM, MEMBER_SSN, MEMBER_ADRESS, MEMBER_PHONE
+        FROM CUSTOMER
+        WHERE MEMBER_ID = ?
+        AND MEMBER_PW = ?
+    </entry>
+
+    <!--비밀번호 변경-->
+    <entry key="updateMyInfoPw">
+        UPDATE CUSTOMER SET
+        MEMBER_PW = ?
+        WHERE MEMBER_NO = ?
+        AND MEMBER_PW = ?
+    </entry>
+
+    <!--내 정보 변경-->
+    <entry key="updateMyId">
+        UPDATE CUSTOMER SET
+        MEMBER_ID = ?, MEMBER_NM = ?, MEMBER_ADRESS = ?, MEMBER_PHONE = ?
+        WHERE MEMBER_NO = ?
+    </entry>
+
+</properties>

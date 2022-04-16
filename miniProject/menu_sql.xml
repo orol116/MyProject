@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <comment>Menu Service SQL</comment>
+
+    <!--한식 조회-->
+    <entry key="selectKorean">
+        SELECT RESTAURANT_NUM, MENU_NUM, MENU_NAME, MENU_PRICE
+        FROM KOREAN_FOOD
+    </entry>
+
+    <!--양식 조회-->
+    <entry key="selectAmerican">
+        SELECT RESTAURANT_NUM, MENU_NUM, MENU_NAME, MENU_PRICE
+        FROM AMERICAN_FOOD
+    </entry>
+
+    <!--중식 조회-->
+    <entry key="selectChinese">
+        SELECT RESTAURANT_NUM, MENU_NUM, MENU_NAME, MENU_PRICE
+        FROM CHINESE_FOOD
+    </entry>
+
+    <!--일식 조회-->
+    <entry key="selectJapanese">
+        SELECT RESTAURANT_NUM, MENU_NUM, MENU_NAME, MENU_PRICE
+        FROM JAPANESE_FOOD
+    </entry>
+
+    <!--한식 주문-->
+    <entry key="orderKorean">
+        SELECT MENU_PRICE
+        FROM KOREAN_FOOD
+        WHERE MENU_NUM = ?
+    </entry>
+
+    <!--양식 주문-->
+    <entry key="orderAmerican">
+        SELECT MENU_PRICE
+        FROM AMERICAN_FOOD
+        WHERE MENU_NUM = ?
+    </entry>
+
+    <!--중식 주문-->
+    <entry key="orderChinese">
+        SELECT MENU_PRICE
+        FROM CHINESE_FOOD
+        WHERE MENU_NUM = ?
+    </entry>
+
+    <!--일식 주문-->
+    <entry key="orderJapanese">
+        SELECT MENU_PRICE
+        FROM JAPANESE_FOOD
+        WHERE MENU_NUM = ?
+    </entry>
+
+    <!--한식 리뷰 조회-->
+    <entry key="reviewKorean">
+        SELECT REVIEW_NO, REVIEW_CONTENT
+        FROM KOREAN_REVIEW
+    </entry>
+
+    <!--양식 리뷰 조회-->
+    <entry key="reviewAmerican">
+        SELECT REVIEW_NO, REVIEW_CONTENT
+        FROM AMERICAN_REVIEW
+    </entry>
+
+    <!--중식 리뷰 조회-->
+    <entry key="reviewChinese">
+        SELECT REVIEW_NO, REVIEW_CONTENT
+        FROM CHINESE_REVIEW
+    </entry>
+
+    <!--일식 리뷰 조회-->
+    <entry key="reviewJapanese">
+        SELECT REVIEW_NO, REVIEW_CONTENT
+        FROM JAPANESE_REVIEW
+    </entry>
+
+    <!--한식 리뷰 작성-->
+    <entry key="insertReviewKorean">
+        INSERT INTO KOREAN_REVIEW
+        VALUES(SEQ_KOREAN_REVIEW_NO.NEXTVAL, ?)
+    </entry>
+
+    <!--양식 리뷰 작성-->
+    <entry key="insertReviewAmerican">
+        INSERT INTO AMERICAN_REVIEW
+        VALUES(SEQ_AMERICAN_REVIEW_NO.NEXTVAL, ?)
+    </entry>
+
+    <!--중식 리뷰 작성-->
+    <entry key="insertReviewChinese">
+        INSERT INTO CHINESE_REVIEW
+        VALUES(SEQ_CHINESE_REVIEW_NO.NEXTVAL, ?)
+    </entry>
+
+    <!--일식 리뷰 작성-->
+    <entry key="insertReviewJapanese">
+        INSERT INTO JAPANESE_REVIEW
+        VALUES(SEQ_JAPANESE_REVIEW_NO.NEXTVAL, ?)
+    </entry>
+
+
+
+
+</properties>
