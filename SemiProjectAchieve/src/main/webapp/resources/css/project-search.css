@@ -1,0 +1,215 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Hahmlet', serif;
+    letter-spacing: 0.8px;
+}
+
+
+
+/* content */
+.content{
+    height: 800px;
+    display: flex;
+    height: auto;
+}
+
+.div-sec{
+    width: auto;
+    height: auto;
+    display: flex;
+}
+
+#project-area{
+    width: 90%;
+    margin: auto;
+}
+
+
+/* a태그 공통 설정 */
+.content-2 a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+
+.content-2 a:hover{
+    cursor: pointer;
+}
+
+/* 이름 */
+.project-name{
+    font-size: 2em;
+    margin-top: 80px;
+}
+
+/* 목록 영역 */
+.list-wrapper{
+    width: 100%;
+    min-height: 670px;
+}
+
+/* 목록 출력 테이블 */
+.list-table{
+    width: 100%;
+    padding: 20px;
+
+    border-collapse: collapse;
+}
+
+.list-table > thead{
+    background-color: rgb(14, 25, 78);
+    color: white;
+}
+
+.list-table > thead > tr > *:nth-of-type(2){
+    text-align: center;
+}
+
+.list-table tr{
+    height: 60px;
+}
+
+
+.list-table > tbody > tr{
+    border-bottom: 1px solid gray;
+}
+
+/* 글씨 중앙정렬 */
+.list-table tr > *{text-align: center;}
+
+/* 각 항목별 너비 */
+.list-table tr > *:nth-of-type(1) {
+    width: 25%;
+    justify-content: center;
+}
+.list-table tr > *:nth-of-type(2) {
+    width: 15%;
+    font-weight: bold;
+}
+.list-table tr > *:nth-of-type(3) {
+    width: 5%;
+    font-weight: bold;
+}
+.list-table tr > *:nth-of-type(4) {
+    width: 40%;
+    font-weight: bold;
+}
+.list-table tr > *:nth-of-type(5) {
+    width: 10%;
+    font-weight: bold;
+}
+
+/* 버튼 영역 */
+.btn-area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 버튼 */
+#requestBtn{
+    width: 90px;
+    height: 40px;
+    background-color: white;
+    border: 1px solid rgb(14, 25, 78);
+    color:rgb(14, 25, 78);
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#requestBtn > a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+/* 페이지네이션 (Pagination) */
+.pagination{
+    padding: 0;
+    list-style: none;
+
+    display: flex;
+    justify-content: center;
+}
+
+.pagination > li{
+    width: 20px;
+    margin: 0 5px;
+    text-align: center;
+}
+
+.pagination a{
+    width: 100%;
+    height: 100%;
+    display: block;
+
+}
+
+/* 현제 페이지 번호 */
+.pagination .current{
+    background-color: rgb(14, 25, 78);
+    border-radius: 20%;
+    color: white;
+    font-weight: bold ;
+}
+
+/* 검색 영역 */
+#projectSearch{
+    width: 500px;
+    height: 30px;
+
+    display: flex;
+    justify-content: space-between;
+
+    margin: 50px auto;
+
+}
+
+/* 검색 영역 공통 스타일 */
+#projectSearch * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+#projectSearch select{
+    width: 100px;
+}
+
+#projectSearch input{
+    flex-grow: 1;
+    margin: 0 10px;
+    padding-left: 10px;
+}
+
+#projectSearch button{
+    width: 100px;
+
+    background-color: rgb(14, 25, 78);
+    color: white;
+    border: none;
+}
+
+#projectSearch button:hover{
+
+    cursor: pointer;
+
+    border: 1px solid rgb(14, 25, 78);
+    color: rgb(14, 25, 78);
+    background-color: white;
+}
+
+
+*{
+    box-sizing: border-box;
+    font-family: 'Hahmlet', serif;
+    letter-spacing: 0.8px;
+}
+

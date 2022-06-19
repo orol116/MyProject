@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>board-sql.xml</comment>
+
+	<!-- 게시판 이름 조회 -->
+	<entry key="selectBoardName">
+		SELECT BOARD_NM FROM BOARD_TYPE
+		WHERE BOARD_CD = ?
+		AND PROJECT_NO = ?
+	</entry>
+	
+	<!-- 게시판 종류 조회 -->
+	<entry key="selectboardTypeList">
+		SELECT BOARD_NM,BOARD_CD 
+		FROM BOARD_TYPE
+		WHERE PROJECT_NO = ?
+		ORDER BY BOARD_CD
+	</entry>
+	
+	<!-- 최신글 게시판 글 수 조회 -->
+	<entry key="selectNewListCount">
+		SELECT COUNT(*) FROM BOARD
+		WHERE BOARD_ST = 'N'
+		AND PROJECT_NO = ?
+	</entry>
+	
+	<!-- 특정 게시판 글 수 조회 -->
+	<entry key="selectListCount">
+		SELECT COUNT(*) FROM BOARD
+		WHERE BOARD_ST = 'N'
+		AND BOARD_CD = ?
+		AND PROJECT_NO = ?
+	</entry>
+	
+	<!-- 특정 게시판에서 일정한 범위의 목록 조회 -->
+	<entry key="selectBoardList">
+		SELECT * FROM(
+		    SELECT ROWNUM RNUM, A.* FROM(
+		        SELECT BOARD_NO, BOARD_TITLE, MEMBER_NICK, 
+		            TO_CHAR(CREATE_DT, 'YYYY-MM-DD') AS CREATE_DT, 
+		            READ_COUNT
+		        FROM BOARD
+		        JOIN MEMBER USING(MEMBER_NO)
+		        WHERE BOARD_CD = ?
+		        AND BOARD_ST = 'N'
+		        AND PROJECT_NO = ?
+		        ORDER BY BOARD_NO DESC
+		    ) A
+		)
+		WHERE RNUM BETWEEN ? AND ?
+	</entry>
+	
+	<!-- 최신글 조회 -->
+	<entry key="selectBoardMainList">
+		SELECT * FROM(
+		    SELECT ROWNUM RNUM, A.* FROM(
+		        SELECT BOARD_NO, BOARD_TITLE, MEMBER_NICK, 
+		            TO_CHAR(CREATE_DT, 'YYYY-MM-DD') AS CREATE_DT, 
+		            READ_COUNT
+		        FROM BOARD
+		        JOIN MEMBER USING(MEMBER_NO)
+		        WHERE BOARD_ST = 'N'
+		        AND PROJECT_NO = ?
+		        ORDER BY BOARD_NO DESC
+		    ) A
+		)
+		WHERE RNUM BETWEEN ? AND ?
+	</entry>
+	
+	<!--  특정 게시판에서 조건을 만족하는 게시글 수 조회 -->
+	<entry key="searchListCount1">
+		SELECT COUNT(*) FROM BOARD 
+		JOIN MEMBER USING(MEMBER_NO)
+		WHERE BOARD_ST = 'N'
+		AND PROJECT_NO = ?
+	</entry>
+	
+	<entry key="searchListCount2">
+		SELECT COUNT(*) FROM BOARD 
+		JOIN MEMBER USING(MEMBER_NO)
+		WHERE BOARD_ST = 'N'
+		AND BOARD_CD = ?
+		AND PROJECT_NO = ?
+	</entry>
+	
+	<!-- 특정 게시판에서 조건을 만족하는 게시글 목록 조회 -->
+	<entry key="searchBoardList1">
+		SELECT * FROM(
+		   SELECT ROWNUM RNUM, A.* FROM(
+		      SELECT BOARD_NO, BOARD_TITLE, MEMBER_NICK, 
+		         TO_CHAR( CREATE_DT, 'YYYY-MM-DD' ) AS CREATE_DT, 
+		         READ_COUNT 
+		      FROM BOARD
+		      JOIN MEMBER USING(MEMBER_NO)
+		      WHERE BOARD_ST = 'N'
+		      AND PROJECT_NO = ?
+	</entry>
+	
+	<entry key="searchBoardList2">
+		SELECT * FROM(
+		   SELECT ROWNUM RNUM, A.* FROM(
+		      SELECT BOARD_NO, BOARD_TITLE, MEMBER_NICK, 
+		         TO_CHAR( CREATE_DT, 'YYYY-MM-DD' ) AS CREATE_DT, 
+		         READ_COUNT 
+		      FROM BOARD
+		      JOIN MEMBER USING(MEMBER_NO)
+		      WHERE BOARD_CD = ?
+		      AND BOARD_ST = 'N'
+		      AND PROJECT_NO = ?
+	</entry>
+	
+	<entry key="searchBoardList3">
+	      ORDER BY BOARD_NO DESC
+		   ) A
+		)
+		WHERE RNUM BETWEEN ? AND ?
+	</entry>
+	
+	<!-- 다음 게시글 번호 조회 -->
+	<entry key="nextBoardNo">
+		SELECT SEQ_BOARD_NO.NEXTVAL FROM DUAL
+	</entry>
+	
+	<!-- 게시글 삽입 -->
+	<entry key="insertBoard">
+		INSERT INTO BOARD
+		VALUES(?, ?, ?, DEFAULT, DEFAULT, DEFAULT, DEFAULT, ?, ?, ?)
+	</entry>
+	
+	<!-- 게시글 첨부파일 삽입 -->
+	<entry key="insertBoardAttachment">
+		INSERT INTO BOARD_IMG
+		VALUES(SEQ_IMG_NO.NEXTVAL, ?, ?, ?, ?, ?)
+	</entry>
+	
+	<!-- 게시글 삭제 -->
+	<entry key="deleteBoard">
+		UPDATE BOARD SET
+		BOARD_ST = 'Y'
+		WHERE BOARD_NO = ?
+		AND PROJECT_NO = ?
+	</entry>
+	
+	<!-- 게글 상세조회 -->
+	<entry key="selectBoardDetail">
+		SELECT BOARD_NO, BOARD_TITLE, BOARD_CONTENT,
+		TO_CHAR(CREATE_DT,'YYYY"년" MM"월" DD"일" HH24:MI:SS') CREATE_DT,
+		TO_CHAR(UPDATE_DT,'YYYY"년" MM"월" DD"일" HH24:MI:SS') UPDATE_DT,
+		READ_COUNT,MEMBER_NICK, MEMBER_PROFILE, MEMBER_NO, BOARD_NM
+		FROM BOARD
+		JOIN MEMBER USING(MEMBER_NO)
+		JOIN BOARD_TYPE USING(BOARD_CD)
+		WHERE BOARD_NO = ?
+		AND BOARD.PROJECT_NO = ?
+		AND BOARD_ST='N'
+	
+	</entry>
+	
+	<!-- 게시글에 첨부된 파일 리스트 조회 -->
+	<entry key="selectAttachmentList">
+	
+		SELECT * FROM BOARD_IMG
+		WHERE BOARD_NO = ?
+		ORDER BY IMG_LEVEL
+	
+	</entry>
+
+	<!-- 프로젝트 이름 조회 -->
+	<entry key="selectProjectName">
+		SELECT PROJECT_NM 
+		FROM PROJECT
+		WHERE PROJECT_NO = ?
+	</entry>
+	
+	
+	<entry key="updateBoard">
+	UPDATE BOARD SET 
+	BOARD_TITLE =?,
+	BOARD_CONTENT = ?,
+	UPDATE_DT = SYSDATE
+	WHERE BOARD_NO =? 
+	AND PROJECT_NO = ?
+	</entry>
+	
+	<!-- 게시글 이미지 수 -->
+	<entry key="updateBoardAttachment">
+	UPDATE BOARD_IMG SET
+	IMG_RENAME = ?,
+	IMG_ORIGINAL = ?
+	WHERE BOARD_NO = ?
+	AND IMG_LEVEL = ? 
+	AND PROJECT_NO = ? 
+	</entry>
+	
+	<entry key="deleteBoardAttachment">
+		DELETE FROM BOARD_IMG
+		WHERE BOARD_NO = ?
+		AND PROJECT_NO = ?
+		AND IMG_LEVEL IN(
+	</entry>
+	
+	
+	<!-- 프로젝트 소개 조회 -->
+	<entry key="selectProjectIntro">
+		SELECT PROJECT_INTRO
+		FROM PROJECT
+		WHERE PROJECT_NO = ?
+	</entry>
+
+	
+	<!-- 프로젝트 가입 신청 -->
+	<entry key="passAccount">
+		INSERT INTO PROJECT_SIGN VALUES(
+	    SEQ_ACCOUNT_NO.NEXTVAL, ? , ?, 'T')
+	</entry>
+	
+	<!-- 프로젝트 관리자(생성자) 회원 번호 조회 -->
+	<entry key="selectProjectAdminNo">
+		SELECT MEMBER_NO FROM PROJECT WHERE PROJECT_NO = ?
+
+	</entry>
+	
+</properties>

@@ -1,0 +1,70 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Hahmlet', serif;
+    letter-spacing: 0.8px;
+}
+
+body{ 
+    margin: 0;
+}
+
+/* header */
+header{
+    height: 200px;
+    display: flex;
+    border-bottom: 1px solid #ccc;
+}
+
+/* 로고 */
+header > section:nth-of-type(1){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#home-logo{
+    width: 140px;
+    height: auto;
+}
+
+header>section:nth-of-type(2){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-title{
+    width: 500px;
+    height: 50px;
+    padding: 2px;
+    border: 2px solid rgb(14, 25, 78);
+    border-radius: 5px;
+
+    display: flex;
+
+}
+
+#query{
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+
+    /* input 태그에 포커스가 맞춰 졌을때 이를 표현하기위한 바깥선(테두리보다 바깥에 존재) */
+    outline: 0;
+
+    width: 92%;
+}
+
+
+/* 헤더 우측 버튼 */
+.right-header > button{
+    width: 50px;
+    height: 50px;
+    margin-top: 50px;
+    background-color: white;
+    color: rgb(14, 25, 78);
+    font-size: 40px;
+    border: none;
+    cursor: pointer;
+}

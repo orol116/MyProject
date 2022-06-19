@@ -1,0 +1,264 @@
+.div-sec{
+    width: 1200px;
+    height: auto;
+    display: flex;
+}
+
+.myPage-sideMenu{
+    width: 20%;
+}
+
+#board-area{
+    width: 100%;
+}
+
+
+
+
+/* a태그 공통 설정 */
+.board-list a{
+    text-decoration: none;
+    color: black;
+}
+
+.board-list a:hover{
+    text-decoration: underline;
+}
+
+/* 게시판 목록 화면 전체 영역 설정 */
+.board-list{
+    width: 80%;
+    display: inline-block;
+    justify-content: left;
+    align-items: center;
+}
+
+/* 게시판 이름 */
+.board-name{
+    font-size: 2em;
+    margin-top: 80px;
+}
+
+/* 게시글 목록 영역 */
+.list-wrapper{
+    width: 100%;
+    min-height: 670px;
+}
+
+/* 목록 출력 테이블 */
+.list-table{
+    width: 100%;
+    padding: 20px;
+
+    border-collapse: collapse;
+}
+
+.list-table > thead{
+    background-color: rgb(14, 25, 78);
+    color: white;
+}
+
+.list-table > thead > tr > *:nth-of-type(2){text-align: center;}
+
+.list-table tr{
+    height: 60px;
+}
+
+.list-table > tbody > tr{
+    border-bottom: 1px solid rgb(230, 230, 230);
+}
+
+.list-table tr > *{
+    text-align: center;
+}
+
+.list-table tr > *:nth-of-type(1) {width: 10%;}
+
+.list-table tr > *:nth-of-type(2) {
+    width: 50%;
+    text-align: left;
+    padding-left: 50px;
+}
+
+.list-table tr > *:nth-of-type(3) {width: 15%;}
+.list-table tr > *:nth-of-type(4) {width: 15%;}
+.list-table tr > *:nth-of-type(5) {width: 10%;}
+
+/* 버튼 영역 */
+.btn-area{
+    height: 50px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* 버튼 */
+#insertBtn{
+    margin-bottom: 30px;
+    width: 95px;
+    height: 40px;
+    background-color: white;
+    border: 2px solid rgb(14, 25, 78);
+    color:rgb(14, 25, 78);
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* 페이지네이션 (Pagination) */
+.pagination{
+    padding: 0;
+    list-style: none;
+
+    display: flex;
+    justify-content: center;
+}
+
+.pagination > li{
+    width: 20px;
+    margin: 0 5px;
+    text-align: center;
+}
+
+.pagination a{
+    width: 100%;
+    height: 100%;
+    display: block;
+
+    /* letter-spacing: -2px; */
+}
+
+/* 현제 페이지 번호 */
+.pagination .current{
+    background-color: rgb(14, 25, 78);
+    border-radius: 50%;
+    color: white;
+    font-weight: bold ;
+}
+
+/* 검색 영역 */
+#boardSearch{
+    width: 500px;
+    height: 30px;
+
+    display: flex;
+    justify-content: space-between;
+
+    margin: 30px;
+    margin-left: 212px;
+
+}
+
+/* 검색 영역 공통 스타일 */
+#boardSearch * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+#boardSearch select{
+    width: 100px;
+}
+
+#boardSearch input{
+    flex-grow: 1;
+    margin: 0 10px;
+    padding-left: 10px;
+}
+
+#boardSearch button{
+    width: 100px;
+
+    background-color: rgb(14, 25, 78);
+    color: white;
+    border: none;
+
+    
+}
+
+#boardSearch button:hover{
+
+    cursor: pointer;
+
+    border: 1px solid rgb(14, 25, 78);
+    color: rgb(14, 25, 78);
+    background-color: white;
+}
+
+
+
+#sideMenu-list{
+    margin-top: 40px;
+    width: 100%;
+}
+
+.project-main{
+    font-size: 20px;
+}
+
+
+
+
+/* 가입하지 않은 회원이 보는 프로젝트 메인페이지 */
+.project-signup-content{
+    width: 100%;
+
+    margin: 40px 0;
+}
+
+.project-signup-title{
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+}
+
+.project-signup-title > h1{
+    font-size: 2.2em;
+}
+
+.project-signup-title > span{
+    font-size: 1.3em;
+}
+
+.project-signup-intro{
+    width: 80%;
+
+    margin: auto;
+
+}
+
+.project-signup-btn{
+    width: 380px;
+
+    margin: 80px auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.project-signup-btn > *{
+    width: 180px;
+    height: 33px;
+
+    padding: 5px 10px;
+    border: 2px solid rgb(14, 25, 78);
+    background-color: white;
+    color: rgb(14, 25, 78);
+
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+
+    cursor: pointer;
+}
+
+.project-signup-btn > *:hover{
+
+    background-color: rgb(14, 25, 78);
+    color: white;
+}
+
+.display-none{
+    display: none;
+}

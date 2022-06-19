@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>아이디 / 비밀번호 찾기</title>
+
+    <link rel="stylesheet" href="../resources/css/main.css">
+    <link rel="stylesheet" href="../resources/css/findId-style.css">
+
+
+</head>
+<body>
+
+    <main>
+        <header>
+            <!-- 헤더 -->
+            <section>
+                <a href="#">
+                    <img src="../resources/images/Achieve_logo.png" id="home-logo">
+                </a>
+            </section>
+    
+            <section>
+                <article class="project-title">
+                    
+                </article>
+            </section>
+            
+            <section class="right-header">
+                <c:if test="${!empty sessionScope.loginMember}">
+                    <a href="#">
+                        <button type="button" id="chat-btn" class="fa-solid fa-envelope"></button>
+                    </a>
+                </c:if>
+            </section>
+        </header>
+
+        <!-- 아이디가 조회됐을 때 -->
+        <div class="findIdList">
+            <h1>아이디 (E-mail)</h1>
+            <div class="idList-row">user01@achieve.co.kr</div>
+            <div class="idList-row">user01@achieve.co.kr</div>
+            <div class="idList-row">user01@achieve.co.kr</div>
+            <div class="idList-row">user01@achieve.co.kr</div>
+            <div class="idList-row">user01@achieve.co.kr</div>
+        </div>
+
+
+    </main>
+</body>
+</html>

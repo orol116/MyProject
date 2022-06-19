@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ-project-Settings</title>
+
+    <link rel="stylesheet" href="../resources/css/FAQ.css">
+
+    <style>
+    .selectBtn:nth-child(3){
+    width: 160px;
+    height: 60px;
+    margin: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border: 1px solid #455ba8;
+    background-color: #455ba8;
+    color: white;
+    cursor: pointer;
+    }
+
+
+    .selectBtn:nth-child(-n+2){
+    width: 160px;
+    height: 60px;
+    margin: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    }
+
+
+
+    .selectBtn:nth-child(-n+2):hover{
+    background-color: #455ba8;
+    color: white;
+    }       
+
+
+
+    </style>
+
+</head>
+<body>
+    <main>  
+        <header>
+
+            <!-- 클릭 시 메인페이지로 이동하는 로고 -->
+            <section>
+                <a href="#">
+                    <img src="../resources/images/Achieve_logo.png" id="home-logo">
+                </a>
+            </section>
+
+            <section>
+                <article class="search-area">
+                    <!-- form 내부 input 태그 값을 서버 또는 페이지로 전달 -->
+                    <form action="#" name="search-form">
+        
+                        <!-- fieldset: form 내부에서 input을 종류별로 묶는 용도로 많이 사용 -->
+                        <fieldset>
+
+                            <!-- autocomplete="off" : HTML 기본 자동완성 사용 X -->
+                            <input type="search" id="query" name="query" 
+                                autocomplete="off" placeholder="프로젝트, 게시글, 페이지 검색">
+        
+                            <!-- 검색 버튼 -->
+                            <button type="submit" id="search-btn" class="fa-solid fa-magnifying-glass"></button>  
+                        </fieldset>
+                    </form>
+                </article>
+            </section>
+
+
+        </header>
+
+        
+
+
+        <div id="FAQ-container">
+
+            <div id="FAQ-main">
+                <div id="select-area">
+                    <button class="selectBtn">로그인</button>
+                    <button class="selectBtn">프로젝트 생성</button>
+                    <button class="selectBtn">프로젝트 설정</button>
+
+                </div>
+
+
+                <ul class="FAQ">
+                    <li>
+                        <input type="checkbox" id="FAQ-1">
+                        <label for="FAQ-1">계정을 탈퇴하고 싶어요.</label>
+                        <div>
+                            <p>테스트중입니다. 프로젝트 화면 나오고 하면 추가할께요!!</p>
+                            <p>테스트중입니다. 프로젝트 화면 나오고 하면 추가할께요!!</p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <input type="checkbox" id="FAQ-2">
+                        <label for="FAQ-2">전화번호 외 다른 정보는 어떻게 등록하나요?</label>
+                        <div>
+                            <p>테스트중입니다. 프로젝트 화면 나오고 하면 추가할께요!!</p>
+                            <p>테스트중입니다. 프로젝트 화면 나오고 하면 추가할께요!!</p>
+                            <p>테스트중입니다. 프로젝트 화면 나오고 하면 추가할께요!!</p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <input type="checkbox" id="FAQ-3">
+                        <label for="FAQ-3">계정을 탈퇴하고 싶어요.</label>
+                        <div>
+                            <p>테스트중입니다. 프로젝트 화면 나오고 하면 추가할께요!!</p>
+                            <p>테스트중입니다. 프로젝트 화면 나오고 하면 추가할께요!!</p>
+                            <p>테스트중입니다. 프로젝트 화면 나오고 하면 추가할께요!!</p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <input type="checkbox" id="FAQ-4">
+                        <label for="FAQ-4">계정을 탈퇴하고 싶어요.</label>
+                        <div>
+                            <p>테스트중입니다. 프로젝트 화면 나오고 하면 추가할께요!!</p>
+                            <p>테스트중입니다. 프로젝트 화면 나오고 하면 추가할께요!!</p>
+                            <p>테스트중입니다. 프로젝트 화면 나오고 하면 추가할께요!!</p>
+                        </div>
+                    </li>
+
+
+                </ul>
+
+                
+        </div>
+    
+    </main>
+
+
+
+
+    <footer>
+        <p>Copyright &copy; KH Information Educational Institute A-Class</p>
+
+        <article>
+            <a href="#">프로젝트 소개</a>
+            <span>|</span>
+            <a href="#">이용약관</a>
+            <span>|</span>
+            <a href="#">개인정보처리방침</a>
+            <span>|</span>
+            <a href="#">고객센터</a>
+        </article>
+    </footer>
+
+
+    
+</body>
+</html>

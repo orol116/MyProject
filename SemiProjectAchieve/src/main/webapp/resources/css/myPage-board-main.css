@@ -1,0 +1,96 @@
+
+*{
+    box-sizing: border-box;
+    font-family: 'Hahmlet', serif;
+    letter-spacing: 0.8px;
+}
+
+
+/* 마이페이지 영역 */
+.myPage-content{
+    width: auto;
+    height: auto;
+
+    display: flex;
+}
+
+/* 마이페이지 사이드메뉴 */
+.myPage-sideMenu{
+    width: 240px;
+
+    display: flex;
+    justify-content: right;
+
+    padding-top: 40px;
+
+}
+
+
+/* 마이페이지 공통부분 */
+.myPage-main{
+    width: 900px;
+    padding: 40 30px;
+    
+    margin-top: 40px;
+
+
+}
+
+#myPage-detail{
+    margin-top: 40px;
+    margin-left: 10px;
+}
+
+/* 프로필 부분 */
+.myPage-first{
+    display: inline-block;
+	width:80px ;
+	height:80px;
+    padding: 15px;
+    border-radius:50%;
+}
+.myPage-second{
+    display: inline-block;
+    font-size: 13px;
+    padding: 10px 10px 25px 15px;
+            /* 상 우 하 좌 */
+}
+.myPage-nickname{
+    font-size: 17px;
+}
+.myPage-grade{
+    display: inline-block;
+}
+
+.myPage-grade{
+    display: block;
+    letter-spacing: -1px;
+    padding: 10px 0 10px 0;
+}
+.myPage-info>span{
+    display: inline;    
+   padding-right: 10px;
+}
+
+/* 중간 영역 태그 */
+.myPage-third>a{
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    letter-spacing: -0.5px;
+    padding: 2px;
+    margin: 0.5em;
+
+}
+.myPage-third{
+    margin-bottom: 20px;
+}
+.myPage-third>a:hover{
+    background-color: #f2f2f2;
+}
+
+#profile-logo{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}

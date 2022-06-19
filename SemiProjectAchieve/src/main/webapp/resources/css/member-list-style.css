@@ -1,0 +1,152 @@
+.div-sec{
+    width: 90%;
+    height: auto;
+    display: flex;
+}
+
+
+#board-member{
+    height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#member-content{
+    width: 580px;
+    height: 90%;
+
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#member-count{
+    width: 70%;
+    height: 10%;
+    border: 1px solid #ccc;
+    padding-left: 20px;
+    margin: 20px;
+
+    border-radius: 5px;
+    background-color: aliceblue;
+
+}
+#member-count>h4{
+    margin: 5px 0;
+}
+
+#member-list{
+    width: 70%;
+    height: 80%;
+    border: 1px solid #ccc;
+    overflow: auto;
+    margin: 0 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.manager-list{
+    height: auto;
+    margin: 10px;
+}
+
+.member-list{
+    height: auto;
+    margin: 10px;
+}
+/* .member-list:nth-of-type(1){
+    border-bottom: 1px solid #ccc;
+} */
+
+
+.member-list>.member-status{
+    font-size: 0.8em;
+}
+.manager-list>.member-status{
+    font-size: 0.8em;
+}
+
+.member-img{
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.member-status-name{
+    padding: 5px;
+    width: 140px;
+    border-radius: 10px;
+    background-color: aliceblue;
+}
+
+.member-status-name>.status{
+    font-size: 0.8em;
+}
+
+.member-img>img{
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+}
+
+.dropBtn{
+    width: 60px;
+    height: 35px;
+    /* margin-left: 100px; */
+    border: 1px solid #aaa;
+    background-color: white;
+    font-size: 0.7em;
+    cursor: pointer;;
+    border-radius: 5px;
+
+}
+.dropBtn:hover{
+    background-color: red;
+    color: white;
+    border: none;
+    
+}
+.backBtn{
+    width: 60px;
+    height: 35px;
+    /* margin-left: 100px; */
+    border: 1px solid #aaa;
+    background-color: white;
+    font-size: 0.7em;
+    cursor: pointer;
+    
+    border-radius: 5px;
+}   
+.backBtn:hover{
+    background-color: green;
+    color: white;
+    border: none;
+
+}
+
+.drop{
+    background-color: red;
+}
+.back{
+    background-color: green;
+}
+.none{
+    background-color: white;
+}
+
+.tontWhite{
+    color: white;
+}
+
+*{
+    box-sizing: border-box;
+    font-family: 'Hahmlet', serif;
+    letter-spacing: 0.8px;
+}

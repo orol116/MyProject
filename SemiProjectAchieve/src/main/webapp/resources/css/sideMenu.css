@@ -1,0 +1,90 @@
+.menu ::before{
+    font-family: 'Material Icons';
+    font-size: 1.5em;
+    float: left;
+    clear: left;
+}
+.menu label::before{ content: '\e5d2'; }
+.menu li:nth-child(1) a::before{ content: '\f02e'; }
+.menu li:nth-child(2) a::before{ content: '\e853'; }
+.menu li:nth-child(3) a::before{ content: '\e7ef'; }
+.menu li:nth-child(4) a::before{ content: '\e873'; }
+.menu li:nth-child(5) a::before{ content: '\e645'; }
+.menu li:nth-child(6) a::before{ content: '\e3c9'; }
+.menu li:nth-child(7) a::before{ content: '\e7f0'; }
+
+#expand-menu { 
+    display: none;
+}
+#expand-menu:checked ~ ul { /* 체크박스 체크되었으면 메뉴 목록 표시 - 반응형 표시용 */
+    display: block;
+    height: auto;
+}
+
+.menu {
+    display: block;
+    width: 200px;
+    background-color: #fff;
+    color: #000;
+    border-radius: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow: hidden; 
+    transition: all 0.5s ease; 
+    position: absolute;
+    margin-left: 75px;
+    margin-top: 20px;
+    
+}
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.menu a, .menu > label {
+    display: block;
+    height: 25px;
+    padding: 8px;
+    cursor: pointer;
+    color: #000;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    color: #fff;
+}
+.menu ul li:hover, .menu > label:hover {
+    background-color: rgb(14, 25, 78);
+    color: #fff;
+    border-radius: 10px;
+}
+.menu div {
+    line-height: 1.5;
+    font-size: 1em;
+    font-family: 'Noto Sans KR';
+    padding: 0 0 0 50px; /* 아이콘과 텍스트 사이 여백 */
+}
+
+@media screen and (max-width:1023px) {
+    .menu { /* 1단계 */
+        width: 60px;
+    }
+}
+@media screen and (max-width:560px) {
+    .menu #expand-menu:not(:checked) ~ ul { /* 2단계 */
+        display: none;
+      
+    }
+}
+
+.menu div {
+    position: absolute; /* 절대 위치로 텍스트 고정 */
+    left: 50px;
+    line-height: 1.5;
+    font-size: 1em;
+    font-family: 'Noto Sans KR';
+    padding: 0 0 0 20px; /* 패딩 20p로 축소 */
+}
+
+
+

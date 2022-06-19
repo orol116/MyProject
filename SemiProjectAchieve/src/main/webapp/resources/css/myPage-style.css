@@ -1,0 +1,274 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Hahmlet', serif;
+    letter-spacing: 0.8px;
+}
+
+body{ 
+    margin: 0;
+}
+
+
+
+/* 마이페이지 영역 */
+.myPage-content{ 
+    /* 공통 class */
+    width: auto;
+    height: auto;
+
+    display: flex;
+}
+
+
+/* 마이페이지 섹션 */
+.myPage-sideMenu{
+    width: 25%;
+
+    display: flex;
+    justify-content: right;
+    align-items: top;
+
+    padding-top: 40px;
+
+    /* border-right: 2px solid #b4b4b4; */
+}
+
+.myPage-main{
+    width: 100%;
+
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+
+
+/* 마이페이지 메인 */
+
+#myPage-detail{
+    margin-top: 50px;
+    margin-left: 180px;
+}
+
+/* 페이지 제목 */
+#myPage-title{
+    font-size: 2em;
+}
+
+/* 행 */
+.myPage-detail-row{
+    margin: 20px 0;
+}
+
+/* 행 이름 */
+.myPage-detail-row > div{
+    font-size: 1.1em;
+    font-weight: bold;
+
+    padding: 5px 0;
+
+    color: #504d4d;
+
+}
+
+/* input */
+.myPage-detail-input{
+    width: 380px;
+    height: 40px;
+
+    font-size: 17px;
+
+    margin: 8px 0;
+
+    padding-left: 5px;
+
+    border: 0;
+    border-bottom: 1px solid #b4b4b4;
+    outline: 0;
+}
+
+.myPage-detail-input:focus-within{
+    border-bottom: 2px solid rgb(14, 25, 78);
+}
+
+/* 아이디 */
+#memberEmail{
+    font-size: 25px;
+    font-weight: bold;
+    padding: 20px 0 10px;
+}
+
+/* 버튼 */
+#modify{
+    width: 380px;
+    height: 40px;
+
+    margin: 35px 0;
+
+    font-weight: bold;
+    font-size: 1.1em;
+
+    border: none;
+    border-radius: 5px;
+
+    background-color: rgb(14, 25, 78);
+    color: white;
+
+    cursor: pointer;
+}
+
+
+
+
+/* 회원 탈퇴 */
+
+/* 회원탈퇴 페이지 하단부 */
+
+/* 회원 탈퇴 안내 */
+.secession-guide{
+    margin: 70px 0;
+}
+
+.secession-guide-detail{
+    padding: 3px 0;
+
+    font-size: 15px;
+    font-weight: bold;
+    color: #b4b4b4;
+
+    letter-spacing: 1.2px;
+    
+}
+
+/* 밑줄 */
+#blank{
+    margin: 20px 0;
+    border-bottom: 2px solid #b4b4b4;
+}
+
+#chkbox > span{
+    font-weight: bold;
+}
+
+/* 버튼 영역 */
+.secession-btn-area{
+    margin: 40px 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+    
+
+
+/* 회원 탈퇴 취소 버튼 */
+#secession-cancel-btn{
+    width: 100px;
+    height: 40px;
+    margin-right: 130px;
+
+    font-weight: bold;
+    font-size: 1.1em;
+
+    border: 2px solid rgb(14, 25, 78);
+    border-radius: 5px;
+
+    background-color: white;
+    color: rgb(14, 25, 78);
+
+    cursor: pointer;
+}
+
+
+/* 회원 탈퇴 버튼 */
+#secession-confirm-btn{
+    width: 100px;
+    height: 40px;
+
+    font-weight: bold;
+    font-size: 1.1em;
+
+    border: none;
+    border-radius: 5px;
+
+    background-color: rgb(14, 25, 78);
+    color: white;
+
+    cursor: pointer;
+}
+
+
+
+
+
+
+/* 프로필 */
+
+/* 프로필 이미지 영역 */
+.profile-image-area{
+    width: 230px;
+    height: 230px;
+
+    border: 3px solid #ddd;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 50px;
+
+    position: relative;
+}
+
+/* 프로필 이미지 */
+#profile-image{
+    width: 100%;
+    height: 100%;
+
+    border-radius: 50%;
+}
+
+/* 프로필 버튼 영역 */
+.profile-btn-area{
+    width: 230px;
+    margin: 80px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* 프로필 버튼 영역의 모든 자식 요소 */
+.profile-btn-area > *{
+    width: 110px;
+    height: 33px;
+
+    padding: 5px 10px;
+    border: 2px solid rgb(14, 25, 78);
+    background-color: white;
+    color: rgb(14, 25, 78);
+
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+
+    cursor: pointer;
+}
+
+#input-image{
+    display: none;
+}
+
+.profile-btn-area > button{
+    background-color: rgb(14, 25, 78);
+    color: white;
+    border: 0;
+}
+
+/* 프로필 이미지 삭제 버튼 */
+#delete-image{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    cursor: pointer;
+}

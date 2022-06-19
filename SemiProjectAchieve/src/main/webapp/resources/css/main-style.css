@@ -1,0 +1,24 @@
+/* 메인페이지 CSS 임시 파일 */
+/* 임시 Header */
+header{
+    height: 200px;
+    display: flex; /* flex 형식으로 변경 -> 내부 요소를 유연하게 정렬/배치 */
+    justify-content: left;
+    align-items: center;
+    border-bottom: 2px solid #b4b4b4;
+}
+
+#logo{ /* 임시 */
+    width: 150px;
+    height: 150px;
+
+    margin: 0 180px;
+}
+
+header > span{
+    font-size: 80px;
+    font-weight: bold;
+    text-align: center;
+
+    color: rgb(14, 25, 78);
+}

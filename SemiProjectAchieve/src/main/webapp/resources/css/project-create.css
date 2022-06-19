@@ -1,0 +1,138 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Hahmlet', serif;
+    letter-spacing: 0.8px;
+}
+
+
+.classPage-content{
+
+    margin: 30px;
+
+    display: flex; 
+    flex-direction: column;
+}
+
+.classPage-inside{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px auto;
+}
+
+/* 프로젝트 관련 정보 입력 (왼쪽) */
+.classPage-left{
+    width: 40%;
+
+    border: solid 3px rgb(14, 25, 78);
+    border-radius: 5px;
+
+    margin: 20px 0;
+
+    padding: 30px;
+
+}
+
+.classPage-left > * {
+    width: 90%;
+    margin: 10px 0;
+}
+
+.classPage-left input{
+    border: 0;
+    border-bottom: 1px solid #b4b4b4;
+    outline: 0;
+
+    padding-left: 3px;
+}
+
+
+/* 중복확인 버튼 */
+#name-double-check{
+    width: 75px;
+    height: 32px;
+    margin-top: 7px;
+    margin-left: 15px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    background-color: rgb(14, 25, 78);
+    color: white;
+
+    border-radius: 5px;
+}
+
+/* 프로젝트 공개 여부(오른쪽) */
+.classPage-right{
+    width: 40%;
+
+    border: solid 3px rgb(14, 25, 78);
+    border-radius: 5px;
+
+    margin: 20px 0;
+
+    padding: 30px;
+
+}
+
+.rightPage{
+    display: flex;
+    flex-direction: column;
+}
+
+.rightPage > div{
+    margin: 40px 0;
+}
+
+.classPage-right label{
+    font-size: 1.3em;
+    font-weight: bolder;
+}
+
+
+/* 버튼 영역 */
+.submit-btn-area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 30px 0;
+}
+
+#createBtn{
+    width: 380px;
+    height: 60px;
+
+    font-weight: bold;
+    font-size: 1.1em;
+
+    border: none;
+    border-radius: 5px;
+
+    margin-top: 30px;
+
+    background-color: rgb(14, 25, 78);
+    color: white;
+
+    cursor: pointer;
+}
+
+/* *{
+    box-sizing: border-box;
+    font-family: 'Hahmlet', serif;
+    letter-spacing: 0.8px;
+} */
+
+#projectQuota{
+margin-bottom: 35px;
+
+}
+
+#projectName{
+    margin-bottom: 35px;
+}
+
+
+
+

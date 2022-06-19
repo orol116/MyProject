@@ -1,0 +1,264 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Hahmlet', serif;
+    letter-spacing: 0.8px;
+}
+
+
+.content{
+    width: auto;
+    min-height: 900px;
+
+    display: flex;
+}
+
+.sideMenu{
+    width: 25%;
+
+    display: flex;
+    justify-content: right;
+    align-items: top;
+
+    padding-top: 40px;
+    
+}
+
+.main{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: top;
+    /* min-height: 800px; */
+    padding: 70px;
+}
+
+
+/* ---------------------------------------------------- */
+/* 사이드바 메뉴 */
+
+.menu ::before{
+    font-family: 'Material Icons';
+    font-size: 1.5em;
+    float: left;
+    clear: left;
+}
+.menu label::before{ content: '\e5d2'; }
+.menu li:nth-child(1) a::before{ content: '\f02e'; }
+.menu li:nth-child(2) a::before{ content: '\e853'; }
+.menu li:nth-child(3) a::before{ content: '\e7ef'; }
+.menu li:nth-child(4) a::before{ content: '\e873'; }
+.menu li:nth-child(5) a::before{ content: '\e645'; }
+.menu li:nth-child(6) a::before{ content: '\e3c9'; }
+.menu li:nth-child(7) a::before{ content: '\e7f0'; }
+
+.menu {
+    display: block;
+    overflow: hidden; 
+    width: 200px;
+    background-color: #fff;
+    color: #000;
+    transition: all 0.5s ease; 
+    border-radius: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    
+}
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li{
+    margin-top: 10px;
+    position: relative;
+}
+
+.menu a {
+    display: block;
+    height: 25px;
+    padding: 8px;
+    cursor: pointer;
+    color: rgb(14, 25, 78);
+    text-decoration: none;
+}
+
+.menu div {
+    position: absolute;
+    left: 40px;
+    line-height: 1.5;
+    font-size: 1em;
+    font-family: 'Noto Sans KR';
+}
+
+/* ----------------------------------------------------------------------------------------- */
+
+
+#FAQ-container{
+   display: inline-block;
+   border: 2px solid black;
+   width: 80%;
+   
+}
+
+#FAQ-main{
+    padding: 20px;
+}
+
+#FAQ-middle{
+    border: 1px solid #ccc;
+    margin-top: 30px;
+}
+
+
+
+#select-area{
+    border: 1px solid black;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+
+
+}
+
+#FAQ-header{
+    height: 50px;
+    font-size: 17px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    padding-left: 23px;
+    border-bottom: 1px solid #ccc;
+    background-color: #ddd;
+
+}
+
+/* ----------------------------------- */
+
+.FAQ{
+    list-style: none;
+    border: 1px solid #ccc;
+    padding: 0 10px;
+}
+
+.FAQ > li{
+    padding: 20px 0;
+    box-sizing: border-box;
+
+}
+
+.FAQ > li:nth-child(n+2){
+    border-top: 1px solid #ccc;
+}
+
+.FAQ input{
+    display: none;
+}
+
+.FAQ label{
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+}
+
+.FAQ label::before{
+    display: block;
+    content: "";
+    width: 0;
+    height: 0;
+    border: 8px solid transparent;
+    border-left: 8px solid rgb(14, 25, 78);
+    margin: 2px 0 0 8px;
+    float: left;
+}
+
+.FAQ input:checked + label::before {
+    border: 8px solid transparent;
+    border-top: 8px solid rgb(14, 25, 78);
+    border-bottom: 0;
+    margin: 8px 4px 0;
+    
+}
+
+.FAQ div{
+    display: none;
+    color: #666;
+    font-size: 0.9375em;
+    overflow: hidden;
+    padding: 10px 0 10px 30px;
+    box-sizing: border-box;
+    
+}
+
+.FAQ input:checked + label + div{
+    display: block;
+}
+
+.selectBtn{
+    width: 180px;
+    height: 60px;
+    margin: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+/* ---------------------personal-info.css------------------ */
+
+#infor-main{
+    display: block;
+    border: 2px solid black;
+    width: 80%;
+    margin: auto;
+}
+
+#infor-first{
+    background-color: rgb(199, 196, 196);
+    font-weight: bold;
+    font-size: 18px;
+    padding: 5px 20px;
+    margin-bottom: 0;
+
+
+}
+
+#start-day{
+    background-color: rgb(199, 196, 196);
+    font-size: 13px;
+    padding: 0 0 10px 20px;
+
+    
+}
+
+
+.infor-header{
+    border: 1px solid black; 
+    font-size: 20px;
+    font-weight: 700;
+    padding: 10px 20px;
+}
+
+.infor-text{
+    font-size: 13px;
+    padding: 20px 20px;
+    letter-spacing: 0 5px;
+    
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

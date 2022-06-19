@@ -1,0 +1,88 @@
+.myPage-sideMenu{
+
+    flex-basis: 25%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+
+}
+
+/* 마이페이지 사이드 메뉴 */
+/* 리스트 */
+#sideMenu-list{
+    width: 60%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+/* 페이지 제목 */
+.myPage-sideMenu h2{
+    font-size: 1.7em;
+    font-weight: bolder;
+
+    margin: 50px 0;
+}
+
+
+/* 메뉴 이름 */
+.sideMenu-list-row{
+    width: 100%;
+
+    padding-bottom: 0;
+    margin: 5px 0;
+}
+
+.sideMenu-list-row:nth-child(2){
+    margin-top: 50px;
+}
+
+.myPage-sideMenu a{
+    text-decoration: none;
+    color: rgb(14, 25, 78);
+    height: 100%;
+
+    font-weight: bold;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sideMenu-list-row > a{
+    font-size: 1.2em;
+}
+
+/* 마우스 효과 */
+.sideMenu-list-row a:hover{
+    /* text-decoration:  underline ; */
+
+    border-bottom: 3px solid white;
+}
+
+.sideMenu-list-row ::before {
+    font-family: 'Material Icons';
+    font-size: 1.5em;
+    float: left;
+    clear: left;
+}
+
+#project a::before{ content: '\e5d2'; }
+
+#sideMenu-list div:nth-last-of-type(1) a::before{ content: '\e8b8'; }
+#sideMenu-list div:nth-last-of-type(2) a::before{ content: '\f8df'; }
+#sideMenu-list div:nth-last-of-type(3) a::before{ content: '\e853'; }
+#sideMenu-list div:nth-last-of-type(4) a::before{ content: '\e896'; }
+#sideMenu-list div:nth-last-of-type(5) a::before{ content: '\ef42'; }
+
+#sideMenu-list div:nth-of-type(1) a::before{ content: '\e88a'; }
+
+.sideMenu-list-row{
+    display: flex;
+}
+
+#sideMenu-list{
+    padding-left: 30px;
+}

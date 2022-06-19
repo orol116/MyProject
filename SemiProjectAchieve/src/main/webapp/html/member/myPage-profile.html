@@ -1,0 +1,89 @@
+<!-- <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Page</title>
+
+    <!-- 헤더, 푸터 위한 main.css -->
+    <link rel="stylesheet" href="../resources/css/main.css">
+
+    <link rel="stylesheet" href="../resources/css/myPage-style.css">
+    <link rel="stylesheet" href="../resources/css/myPage-sidebar.css">
+
+    <!-- 사이드바 아이콘 사용을 위한 링크 -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+    <script src="https://kit.fontawesome.com/8a3ea3bf29.js" crossorigin="anonymous"></script>
+</head>
+<body>    
+    <main>
+        <header>
+            <img src="../resources/images/Achieve_logo.png" id="logo"><span>header : Achieve</span>
+        </header>
+
+        <!-- 마이페이지 -->
+        <section class="myPage-content">
+
+            <!-- 왼쪽 사이드 메뉴 -->
+            <section class="myPage-sideMenu">
+                <div class="menu">
+                    <ul>
+                        <li><a href="#" class="item"><div>프로필</div></a></li>
+                        <li><a href="#" class="item"><div>내가 쓴 글</div></a></li>
+                        <li><a href="#" class="item"><div>내가 쓴 댓글</div></a></li>
+                        <li><a href="#" class="item"><div>비밀번호 변경</div></a></li>
+                        <li><a href="#" class="item"><div>회원 탈퇴</div></a></li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 마이페이지 - 메인 내용 -->
+            <section class="myPage-main">
+                <div id="myPage-detail">
+                    <h1 id="myPage-title">프로필 수정</h1>
+  
+                    <form action="#" method="POST" name="myPage-form">
+
+                        <div class="profile-image-area">
+                            <img src="../resources/images/user.png" id="profile-image">
+                            
+                        </div>
+
+                        <div class="profile-btn-area">
+                            <label for="input-image">이미지 선택</label>
+                            <input type="file" name="profileImage" id="input-image">
+                            <button type="submit">변경하기</button>
+                        </div>
+
+
+
+
+                    </form>
+
+            </section>
+
+        </section>
+      
+    </main>
+
+    <footer>
+        <p>Copyright &copy; KH Information Educational Institute A-Class</p>
+        <article>
+            <a href="#">프로젝트 소개</a>
+            <span>|</span>
+            <a href="#">이용약관</a>
+            <span>|</span>
+            <a href="#">개인정보처리방침</a>
+            <span>|</span>      
+            <a href="#">고객센터</a>
+        </article>
+    </footer>
+
+</body>
+</html>

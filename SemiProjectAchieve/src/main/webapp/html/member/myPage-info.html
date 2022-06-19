@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Page</title>
+
+    <link rel="stylesheet" href="../resources/css/main-style.css">
+    <link rel="stylesheet" href="../resources/css/myPage-style.css">
+    <link rel="stylesheet" href="../resources/css/myPage-sidebar.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+<body>
+
+    <main>
+        <header>
+            <img src="../resources/images/Achieve_logo.png" id="logo"><span>header : Achieve</span>
+        </header>
+
+        <!-- 마이페이지 -->
+        <section class="myPage-content">
+
+            <!-- 왼쪽 사이드 메뉴 -->
+            <section class="myPage-sideMenu">
+                <div class="menu">
+                    <ul>
+                        <li><a href="#" class="item"><div>프로필</div></a></li>
+                        <li><a href="#" class="item"><div>내가 쓴 글</div></a></li>
+                        <li><a href="#" class="item"><div>내가 쓴 댓글</div></a></li>
+                        <li><a href="#" class="item"><div>비밀번호 변경</div></a></li>
+                        <li><a href="#" class="item"><div>회원 탈퇴</div></a></li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 마이페이지 - 메인 내용 -->
+            <section class="myPage-main">
+                <div id="myPage-detail">
+                    <h1 id="myPage-title">내 정보</h1>
+
+                    <form action="#" method="post" name="myPage-form">
+                        <!-- onsubmit으로 input이 변화가 없으면 제출X -->
+                            <div class="myPage-detail-row" id="memberEmail">
+                                <div>ID(email)</div> 
+                            </div>
+                            
+                            <div class="myPage-detail-row" id="memberName">
+                                <div>이름</div>            
+                                <input class="myPage-detail-input" type="text" placeholder="유저일">
+                            </div>
+
+                            <div class="myPage-detail-row" id="memberNickname">
+                                <div>닉네임</div>            
+                                <input class="myPage-detail-input" type="text" placeholder="유저일">
+                            </div>
+
+                            <div class="myPage-detail-row" id="memberTel">
+                                <div>핸드폰 번호</div>            
+                                <input class="myPage-detail-input" type="text" placeholder="01017171717">
+                            </div>
+
+                            <div class="myPage-detail-row">
+                                <button id="modify">회원 정보 수정</button>
+                            </div>
+
+                    </form>
+                </div>
+            </section>
+        </section>
+    </main>
+</body>
+</html>

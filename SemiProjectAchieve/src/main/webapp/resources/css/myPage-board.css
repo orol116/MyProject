@@ -1,0 +1,205 @@
+/* 중간 하단 영역 */
+myPage-row{
+    width: 500px;
+    height: 50px;
+    margin-top: 20px;
+
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #ddd;
+}
+
+.myPage-row>*{
+    font-size:  18px;
+    font-weight:  bold;
+}
+
+.myPage-title>label{
+    width: 20%;
+    font-weight: bold;
+    
+}
+.myPage-title>label:first-child{
+    padding: 30px;
+}
+
+.myPage-row>span{
+    width: 70%;
+}
+
+.list-table > thead>tr>th{
+    background-color: rgb(14, 25, 78);
+    color: white;
+}
+/* 작성글/ 작성댓글/ 가입 등등 */
+.myPage-third{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 상단 a 태그들 공통 설정 */
+div.myPage-third1>a{
+    color: black;
+    text-decoration:none;
+    padding-right: 6px;
+}
+/* 첫번째 a태그  */
+div.myPage-third1>a:nth-of-type(1){
+   text-decoration: underline ;
+    color : rgb(14, 25, 78);
+    padding-bottom: 5px;
+    font-weight: 700;
+}
+div.myPage-third1>a:nth-of-type(3){
+    letter-spacing: -0.7px;
+}
+div.myPage-third2>a{
+    color: black;
+    text-decoration:none;
+    letter-spacing: -0.7px;
+    padding-right: 5px;
+}
+
+.board-list a{
+    text-decoration: none;
+    color: black;
+}
+
+.board-list a:hover{
+    text-decoration: underline;
+    color: rgb(14, 25, 78);
+}
+
+
+/* 게시판 목록 화면 전체 영역 설정 */
+.board-list{
+    width: 800px;
+    margin: 50px auto;
+}
+
+
+/* 게시글 목록 영역 */
+.list-wrapper{
+    width: 100%;
+    min-height: 560px;
+}
+
+/* 목록 출력 테이블 */
+.list-table{
+    width: 100%;
+    padding: 20px;
+
+    /* 테두리 상쇄 여부 지정
+    -> 고유 테두리를 지닌 요소와 겹치는 경우
+        테두리를 분리할지 상쇄(덮어쓰기) 할지 지정 */
+    border-collapse: collapse;
+}
+
+.list-table > thead{
+    color: black;
+}
+
+.list-table tr{
+    height: 50px;
+}
+
+.list-table > tbody >tr{
+    border-bottom: 0.5px solid lightgray;
+}
+
+.list-table tr > *{
+    text-align: center;
+}
+
+.list-table tr > *:nth-of-type(1){ 
+    width: 10%; 
+}
+.list-table tr > *:nth-of-type(2){width: 10%;}
+.list-table tr > td:nth-of-type(3){ 
+     width: 55%;
+     text-align: left;
+     padding-left: 35px;
+   }
+.list-table tr > *:nth-of-type(4){ width: 15%;}
+.list-table tr > *:nth-of-type(5){ width: 10%;}
+
+/* 버튼 영역 */
+.btn-area{
+    height:  50px;
+    width: 100%;
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+}
+
+.btn-area > div:nth-of-type(2){
+    display: flex;
+    height: 100%;
+}
+#checkAll{
+    padding-left: 25px;
+}
+
+/* 버튼 */
+.btn{
+    margin-right: 8px;
+    width: 55px;
+    height: 90%;
+
+    text-decoration:none;
+    background-color: white;
+    border: 1px solid rgb(14, 25, 78);
+    color:  rgb(14, 25, 78);
+    text-align: center;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn:hover{
+    background-color: rgb(14, 25, 78);
+    border: 2px solid white;
+    color:  white;
+
+}
+
+
+
+/* pagination  */
+.pagination{
+    padding: 0;
+    list-style: none;
+
+    display: flex;
+    justify-content: center;
+}
+
+.pagination > li{
+    width: 20px;
+    margin: 0 5px;
+    text-align: center;
+   
+}
+
+.pagination a{
+    width: 100%;
+    height: 100%;
+    display: block;
+    letter-spacing: -2px;
+    text-decoration: none;
+    color: black;
+}
+
+/* 현재 페이지 번호 */
+.pagination .current{
+    background-color: rgb(14, 25, 78) ;
+    border-radius: 20%;
+    color: white;
+    font-weight: bold;
+}
+

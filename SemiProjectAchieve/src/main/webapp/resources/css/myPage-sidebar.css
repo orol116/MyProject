@@ -1,0 +1,55 @@
+/* sideMenu.jsp */
+
+.menu {
+    display: block;
+    overflow: hidden;
+    width: 200px;
+    background-color: white;
+    color: black;
+    transition: all 0.5s ease;
+    border-radius: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li{
+    margin-top: 10px;
+    position: relative;
+}
+
+.menu a {
+    display: block;
+    height: 25px;
+    padding: 8px;
+    cursor: pointer;
+    color: rgb(14, 25, 78);
+    text-decoration: none;
+}
+
+.menu div {
+    position: absolute;
+    left: 40px;
+    line-height: 1.5;
+
+    font-weight: bold;
+    font-size: 1em;
+    font-family: 'Hahmlet', serif;
+}
+
+.menu ::before {
+    font-family: 'Material Icons';
+    font-size: 1.5em;
+    float: left;
+    clear: left;
+}
+.menu label::before{ content: '\e5d2'; }
+.menu li:nth-child(1) a::before{ content: '\e853'; }
+.menu li:nth-child(2) a::before{ content: '\ef42'; }
+.menu li:nth-child(3) a::before{ content: '\e896'; }
+.menu li:nth-child(4) a::before{ content: '\e898'; }
+.menu li:nth-child(5) a::before{ content: '\e9ba'; }

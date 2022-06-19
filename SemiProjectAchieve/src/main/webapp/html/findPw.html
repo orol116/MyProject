@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>아이디 / 비밀번호 찾기</title>
+
+    <link rel="stylesheet" href="../resources/css/main.css">
+    <link rel="stylesheet" href="../resources/css/findId-style.css">
+
+
+</head>
+<body>
+
+    <main>
+        <header>
+            <!-- 헤더 -->
+            <section>
+                <a href="#">
+                    <img src="../resources/images/Achieve_logo.png" id="home-logo">
+                </a>
+            </section>
+    
+            <section>
+                <article class="project-title">
+                    
+                </article>
+            </section>
+            
+            <section class="right-header">
+                <c:if test="${!empty sessionScope.loginMember}">
+                    <a href="#">
+                        <button type="button" id="chat-btn" class="fa-solid fa-envelope"></button>
+                    </a>
+                </c:if>
+            </section>
+        </header>
+
+        <!-- 아이디, 비번 찾기 -->
+        <section class="findIdPw-content">
+
+            <!-- 아이디 찾기 -->
+            <section class="find-main">
+                <h1 id="find-title">비밀번호 재설정</h1>
+                
+                <form action="findPwSubmit" method="post" name="findId-form" onsubmit="return findPwInputValidate()">
+                    <!-- onsubmit으로 input이 변화가 없으면 제출X -->
+
+                    <div id="find-container">
+
+                        <div class="find-detail-row" id="memberEmail">
+                            <div>아이디(이메일)</div>            
+                            <input class="find-detail-input" name="memberEmail" type="text" placeholder="user01@achieve.co.kr">
+                        </div>
+                        
+                        <div class="find-detail-row" id="memberName">
+                            <div>이름</div>            
+                            <input class="find-detail-input" name="memberName" type="text" placeholder="유저일">
+                        </div>
+
+                        <div class="find-detail-row" id="memberBirthday">
+                            <div>생년월일</div>            
+                            <input class="find-detail-input" name="memberBirthday" type="text" onkeyup="addHypen(this);" placeholder="1992-11-17 ( - 없이 8자리)">
+                        </div>
+
+
+                        <!-- 비밀번호 찾기는 메일 ajax 통한 메일 발송 -->
+                        <div class="findPw-button-area">
+                            <button id="backToFindIdBtn">뒤로 가기</button>
+                            <button id="sendEmailBtn">인증번호 발송(메일)</button>
+                        </div>
+                    </div>
+
+                </form>
+
+            </section>
+        </section>
+    </main>
+</body>
+</html>
